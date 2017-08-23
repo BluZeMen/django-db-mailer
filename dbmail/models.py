@@ -877,7 +877,7 @@ class MailSubscription(MailSubscriptionAbstract):
 
     def __str__(self):
         if self.user:
-            return self.user.username
+            return getattr(self.user, self.user.USERNAME_FIELD)
         return self.address
 
 
