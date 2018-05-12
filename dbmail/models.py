@@ -882,7 +882,7 @@ class MailSubscription(MailSubscriptionAbstract):
 
     def __str__(self):
         if self.user:
-            return self.user.username
+            return self.user.get_username()
         return self.address
 
 
